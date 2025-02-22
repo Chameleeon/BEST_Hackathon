@@ -37,7 +37,6 @@ create table korisnikov_stub
 	IdKorisnikovogStuba int auto_increment primary key,
 	IdKorisnika int,
 	IdVrste int,
-    BrojBodova int not null default 0,
     StanjeStuba double not null default 0,
     PoslednjaAktivnost timestamp,
     constraint FK_angazovanje_korisnik
