@@ -60,4 +60,19 @@ public class ChallengeController {
             return new ResponseEntity<>("An error occurred while fetching the PillarType. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
         }
     }
+
+    @GetMapping("/challenge")
+    public ResponseEntity<?> getAllChallenges() {
+        try {
+            Iterable<Challenge> challenges = challengeService.findAll();
+            if (challenges != null) {
+                return new ResponseEntity<>(challenges, HttpStatus.OK); // Vraća Challenge ako je pronađen
+            } else {
+                return new ResponseEntity<>("Challenges not found.", HttpStatus.NOT_FOUND); // Vraća 404 ako nije pronađen
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("An error occurred while fetching the PillarType. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
+        }
+    }
 }
