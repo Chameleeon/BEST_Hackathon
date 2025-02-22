@@ -1,13 +1,14 @@
 import { create } from "apisauce";
-import { API_URL } from "@env";
+
 
 const api = create({
-  baseURL: API_URL,
+  baseURL: 'http://172.20.10.3:8080',
   headers: { "Content-Type": "application/json" },
 });
 
 class HttpService {
   handleResponse(response) {
+    
     if (!response.ok) {
       return {
         error: true,
