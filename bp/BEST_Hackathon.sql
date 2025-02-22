@@ -10,8 +10,8 @@ create table korisnik
     KorisnickoIme varchar(30) not null,
     SaltedHashLozinka varchar(600) not null,
     UkupnoBodova int not null default 0,
-    Svijet text not null,
-    Karakter text not null
+    Svijet mediumtext not null,
+    Karakter mediumtext not null
 );
 
 create table grcki_bog

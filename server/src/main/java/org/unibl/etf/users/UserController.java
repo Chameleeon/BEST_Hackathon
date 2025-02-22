@@ -77,6 +77,7 @@ public class UserController {
             User user = userService.findByUsername(username);
             if (user != null) {
                 user.setWorld(map);
+                userService.saveUser(user);
                 return new ResponseEntity<>("World updated!", HttpStatus.OK); // Vraća PillarType ako je pronađen
             } else {
                 return new ResponseEntity<>("User not found.", HttpStatus.NOT_FOUND); // Vraća 404 ako nije pronađen
@@ -93,6 +94,7 @@ public class UserController {
             User user = userService.findByUsername(username);
             if (user != null) {
                 user.setCharacter(character);
+                userService.saveUser(user);
                 return new ResponseEntity<>("Character updated!", HttpStatus.OK); // Vraća PillarType ako je pronađen
             } else {
                 return new ResponseEntity<>("User not found.", HttpStatus.NOT_FOUND); // Vraća 404 ako nije pronađen
