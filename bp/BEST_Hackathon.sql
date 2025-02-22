@@ -43,7 +43,12 @@ create table izazov
     Opis varchar(100) not null,
     VrijemeOd timestamp not null,
     VrijemeDo timestamp not null,
-    BrojBodova int not null
+    BrojBodova int not null,
+    IdVrste int,
+    constraint FK_izazov_vrsta_stuba
+    foreign key (IdVrste)
+    references vrsta_stuba(IdVrste)
+    on update cascade on delete cascade
 );
 
 create table aktivnost

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0f8c6707-228b-4b7a-9722-43ae44cfc007" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../server/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/AdministratorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/RegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/ServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/config/JdbcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/net/etfbl/server/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/test/java/net/etfbl/server/ServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/challenge/Challenge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/challenge/ChallengeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/challenge/ChallengeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/challenge/ChallengeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/config/JdbcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/pillars/PillarType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/pillars/PillarTypeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/pillars/PillarTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/pillars/PillarTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/users/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/users/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/users/RegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/users/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/users/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/users/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unibl/etf/users/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/client_secret_227880444295-s8naj8o0buob4es4nide5sgf50ktvh6i.apps.googleusercontent.com.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/unibl/etf/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/challenge/Challenge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/challenge/ChallengeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/challenge/ChallengeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/challenge/ChallengeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/config/JdbcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/pillars/PillarType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/pillars/PillarTypeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/pillars/PillarTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/pillars/PillarTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/users/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/users/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/users/RegistrationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/users/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/users/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/users/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/unibl/etf/users/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hackathon-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/unibl/etf/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2tNHAYQ8Ys3D4DArJpupJbisyEd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Application.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/challenge",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/unibl/etf/challenge" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="hackathon" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.unibl.etf.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f8c6707-228b-4b7a-9722-43ae44cfc007" name="Changes" comment="" />
+      <created>1740185468137</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740185468137</updated>
+      <workItem from="1740185469293" duration="11613000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
