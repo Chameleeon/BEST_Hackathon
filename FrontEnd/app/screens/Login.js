@@ -8,6 +8,8 @@ export default function LoginScreen({ navigation }) {
 
   const handleLogin = () => {
     Alert.alert("Login Successful", "Welcome back!");
+   
+    navigation.navigate("Task")
   };
 
   return (
