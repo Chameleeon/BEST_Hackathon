@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "2f983887-db2f-4c3e-aa28-631f3a4a128d",
+		"name": "BEST_Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23147729"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Petar\",\n  \"surname\": \"Petrovic\",\n  \"username\": \"pero123\",\n  \"points\": 0,\n  \"password\": \"sifra123\",\n  \"world\": \"Srednji svijet\",\n  \"character\": \"Vitez\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN SUCCESS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Login successful'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Login successful\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"pero123\",\n  \"password\": \"sifra123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN FAIL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Invalid username or password.'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Invalid username or password.\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"marko123\",\n  \"password\": \"sifra13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD GREEK GOD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Greek god saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Greek god saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Hefest\",\n  \"caption\": \"Hefest is the Greek god of artisans, blacksmiths, carpenters, craftsmen, fire, metallurgy, metalworking, sculpture and volcanoes.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/greekGod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"greekGod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PILLAR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'PillarType added successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PillarType added successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"typeName\": \"Energija\",\n  \"greekGodId\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pillar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pillar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PILLAR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Pillar ID is a number\", function () {",
+							"  pm.expect(pm.response.json().id).to.be.a('number');",
+							"});",
+							"",
+							"pm.test(\"Type name is a string with value 'Energija'\", function () {",
+							"  pm.expect(pm.response.json().typeName).to.be.a('string').and.to.equal('Energija');",
+							"});",
+							"",
+							"pm.test(\"Greek god is a number with value '1'\", function () {",
+							"  pm.expect(pm.response.json().greekGodId).to.be.a('number').and.to.equal(1);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pillar/Energija",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pillar",
+						"Energija"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD CHALLENGE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Challenge saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Challenge saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Setnja na posao\",\n  \"caption\": \"U definisanom vremenskom intervalu, otidjite na posao/fakultet pjeske.\",\n  \"timeFrom\": \"2023-10-01T10:00:00\",\n  \"timeUntil\": \"2023-10-07T18:00:00\",\n  \"points\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CHALLENGE FAIL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Challenge with name 'Voznja biciklom na posao' not found.'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Challenge with name 'Voznja biciklom na posao' not found.\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/challenge/Voznja biciklom na posao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"Voznja biciklom na posao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CHALLENGE SUCCESS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Challenge ID is a number\", function () {",
+							"  pm.expect(pm.response.json().id).to.be.a('number');",
+							"});",
+							"",
+							"pm.test(\"Name is a string with value 'Setnja na posao'\", function () {",
+							"  pm.expect(pm.response.json().name).to.be.a('string').and.to.equal('Setnja na posao');",
+							"});",
+							"pm.test(\"Verify timeFrom field in JSON\", function () {",
+							"    pm.expect(pm.response.json().timeFrom).to.equal(\"2023-10-01T10:00:00.000+00:00\");",
+							"});",
+							"",
+							"pm.test(\"Verify timeUntil field in JSON\", function () {",
+							"    pm.expect(pm.response.json().timeUntil).to.equal(\"2023-10-07T18:00:00.000+00:00\");",
+							"});",
+							"",
+							"pm.test(\"Caption is a string with value 'U definisanom vremenskom intervalu, otidjite na posao/fakultet pjeske.'\", function () {",
+							"  pm.expect(pm.response.json().caption).to.be.a('string').and.to.equal('U definisanom vremenskom intervalu, otidjite na posao/fakultet pjeske.');",
+							"});",
+							"",
+							"pm.test(\"Points is a number with value 5\", function () {",
+							"  pm.expect(pm.response.json().points).to.be.a('number').and.to.equal(5);",
+							"});",
+							"",
+							"pm.test(\"Pillar ID is null\", function () {",
+							"  pm.expect(pm.response.json().pillarId).to.be.null;",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/challenge/Setnja na posao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"Setnja na posao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD CHALLENGE WITH FOREIGN KEY",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Challenge saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Challenge saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Voznja biciklom na posao\",\n  \"caption\": \"U definisanom vremenskom intervalu, otidjite na posao/fakultet bicikom.\",\n  \"timeFrom\": \"2023-10-01T10:00:00\",\n  \"timeUntil\": \"2023-10-07T18:00:00\",\n  \"points\": 5,\n  \"pillarId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CHALLENGE SUCCESS 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Challenge ID is a number\", function () {",
+							"  pm.expect(pm.response.json().id).to.be.a('number');",
+							"});",
+							"",
+							"pm.test(\"Name is a string with value 'Voznja biciklom na posao'\", function () {",
+							"  pm.expect(pm.response.json().name).to.be.a('string').and.to.equal('Voznja biciklom na posao');",
+							"});",
+							"pm.test(\"Verify timeFrom field in JSON\", function () {",
+							"    pm.expect(pm.response.json().timeFrom).to.equal(\"2023-10-01T10:00:00.000+00:00\");",
+							"});",
+							"",
+							"pm.test(\"Verify timeUntil field in JSON\", function () {",
+							"    pm.expect(pm.response.json().timeUntil).to.equal(\"2023-10-07T18:00:00.000+00:00\");",
+							"});",
+							"",
+							"pm.test(\"Caption is a string with value 'U definisanom vremenskom intervalu, otidjite na posao/fakultet bicikom.'\", function () {",
+							"  pm.expect(pm.response.json().caption).to.be.a('string').and.to.equal('U definisanom vremenskom intervalu, otidjite na posao/fakultet bicikom.');",
+							"});",
+							"",
+							"pm.test(\"Points is a number with value 5\", function () {",
+							"  pm.expect(pm.response.json().points).to.be.a('number').and.to.equal(5);",
+							"});",
+							"",
+							"pm.test(\"Pillar ID is null\", function () {",
+							"  pm.expect(pm.response.json().pillarId).to.be.a('number').and.to.equal(1);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/challenge/Voznja biciklom na posao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"Voznja biciklom na posao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD USER PILLAR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'UserPillar saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"UserPillar saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"pillarTypeId\": 1,\n  \"points\": 5,\n  \"condition\": 0.24,\n  \"lastActivity\": \"2025-12-02T10:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/userPillar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userPillar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
