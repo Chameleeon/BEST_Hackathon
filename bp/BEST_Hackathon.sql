@@ -85,3 +85,4 @@ create table aktivnost
     references izazov(IdIzazova)
     on update cascade on delete cascade
 );
+
