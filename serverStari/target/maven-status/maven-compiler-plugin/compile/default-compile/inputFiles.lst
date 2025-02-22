@@ -1,0 +1,10 @@
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/Application.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/config/JdbcConfig.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/config/SecurityConfig.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/users/LoginController.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/users/LoginRequest.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/users/RegistrationController.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/users/User.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/users/UserController.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/users/UserRepository.java
+/Users/markomaksimovic/Desktop/BEST_Hackathon/BEST_Hackathon/serverStari/src/main/java/org/unibl/etf/users/UserService.java

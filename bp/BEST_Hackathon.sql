@@ -8,6 +8,7 @@ create table korisnik
     Ime varchar(20) not null,
     Prezime varchar(20) not null,
     KorisnickoIme varchar(30) not null,
+    Lozinka varchar(600) not null,
     UkupnoBodova int not null default 0,
     Svijet text not null,
     Karakter text not null
@@ -16,7 +17,8 @@ create table korisnik
 create table vrsta_stuba
 (
 	IdVrste int auto_increment primary key,
-    NazivKategorije varchar(30) not null
+    NazivVrste varchar(30) not null,
+    GrckiBog varchar(20)
 );
 
 create table angazovanje
