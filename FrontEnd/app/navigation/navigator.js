@@ -6,6 +6,7 @@ import TransportVerification from "../screens/TransportVerifiation";
 import PrehranaVerification from "../screens/PrehranaVerification";
 import ReciklazaVerification from "../screens/ReciklazaVerification";
 import EnergijaVerification from "../screens/EnergijaVerification";
+import RegisterScreen from "../screens/Register";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,8 @@ export default function AppNavigator() {
        <Stack.Screen name="PrehranaVerification" component={PrehranaVerification} />
        <Stack.Screen name="ReciklazaVerification" component={ReciklazaVerification} />
        <Stack.Screen name="EnergijaVerification" component={EnergijaVerification} />
+       <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+       
     </Stack.Navigator>
   );
 }

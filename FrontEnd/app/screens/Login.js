@@ -1,17 +1,32 @@
 import { useState } from "react";
 import { View, Text, TextInput, Alert, ImageBackground, Dimensions, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons"; 
+import { RollInRight } from "react-native-reanimated";
+import auth from '../api/auth'; 
+const { login, register } = auth; 
+
 
 export default function LoginScreen({ navigation }) {
-  const [email, setEmail] = useState("");
+  const [username, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    Alert.alert("Login Successful", "Welcome back!");
-   
-    navigation.navigate("Task")
-  };
+  const handleLogin = async () => {
+    try {
 
+      const response = await login(username, password);
+      console.log(response)
+      if (response.status === 200) {
+        Alert.alert("Login Successful", "Welcome back!");
+        localStorage.setItem("username", username);
+        navigation.navigate("Home");
+      } else {
+        Alert.alert("Login Failed", "Invalid username or password.");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      Alert.alert("Login Error", "Something went wrong. Please try again.");
+    }
+  };
   return (
     <ImageBackground source={require("../../assets/aa.jpg")} style={styles.background} resizeMode="cover">
       <Text style={styles.appTitle}>CO₂Clean</Text>
@@ -21,10 +36,9 @@ export default function LoginScreen({ navigation }) {
           <Ionicons name="mail-outline" size={24} color="#D4AF37" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder="Email"
+            placeholder="Username"
             placeholderTextColor="#E5C100"
-            keyboardType="email-address"
-            value={email}
+            value={username}
             onChangeText={setEmail}
           />
         </View>
@@ -39,6 +53,7 @@ export default function LoginScreen({ navigation }) {
             onChangeText={setPassword}
           />
         </View>
+        <Text style={styles.signUpText}>Don't have an account? <Text style={styles.signUpLink} onPress={() => navigation.navigate("RegisterScreen")}>Sign Up</Text></Text>
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Enter</Text> 
         </TouchableOpacity>
@@ -102,6 +117,16 @@ const styles = StyleSheet.create({
     flex: 1,
     color: "#fff",
     fontSize: 16,
+  },
+  signUpText: {
+    color: "#E5C100",
+    fontSize: 12,
+    marginTop: 10,
+
+  },
+  signUpLink: {
+    fontWeight: "bold",
+    textDecorationLine: "underline",
   },
   button: {
     backgroundColor: "#D4AF37", 
