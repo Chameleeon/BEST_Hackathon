@@ -14,8 +14,13 @@ public class SearchController {
         this.searchEngine = searchEngine;
     }
 
-    @GetMapping("/search")
-    public String searchProducts(@RequestParam String query) {
+    @PostMapping("/search")
+    public String searchProducts(@RequestBody ChatDto query) throws Exception {
         return searchEngine.search(query);
+    }
+
+    @PostMapping("/searchTrashBin")
+    public String searchTrashBin(@RequestBody ChatDto query) throws Exception {
+        return searchEngine.searchTrashBin(query);
     }
 }

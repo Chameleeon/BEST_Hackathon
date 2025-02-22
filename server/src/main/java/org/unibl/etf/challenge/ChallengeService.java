@@ -17,4 +17,6 @@ public class ChallengeService {
     }
     public Iterable<Challenge> findByPillarId(int pillarId) { return challengeRepository.findByPillarId(pillarId); }
 
+    public Iterable<Challenge> findAll() { return challengeRepository.findAll(); }
+
 }
