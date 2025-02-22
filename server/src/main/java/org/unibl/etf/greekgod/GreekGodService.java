@@ -15,5 +15,8 @@ public class GreekGodService {
     public GreekGod findByName(String name) {
         return greekGodRepository.findByName(name);
     }
+    public GreekGod findById(int id) {
+        return greekGodRepository.findById(id);
+    }
 
 }

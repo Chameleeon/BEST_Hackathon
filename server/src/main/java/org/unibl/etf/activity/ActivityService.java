@@ -12,8 +12,9 @@ public class ActivityService {
     public void saveActivity(Activity activity) {
         activityRepository.save(activity);
     }
-//    public Activity findByName(String name) {
-//        return activityRepository.findByName(name);
-//    }
+
+    public Activity findById(int id) {
+        return activityRepository.findById(id);
+    }
 
 }

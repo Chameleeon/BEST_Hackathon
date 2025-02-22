@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PillarTypeRepository extends CrudRepository<PillarType, Long> {
     PillarType findByTypeName(String typeName);
+    PillarType findById(int id);
 }

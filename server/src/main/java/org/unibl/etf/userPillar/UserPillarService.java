@@ -12,6 +12,8 @@ public class UserPillarService {
     public void saveUserPillar(UserPillar pillar) {
         userPillarRepository.save(pillar);
     }
+
+    public Iterable<UserPillar> getByUserId(int userId) { return userPillarRepository.findByUserId(userId); }
 //    public Activity findByName(String name) {
 //        return activityRepository.findByName(name);
 //    }
