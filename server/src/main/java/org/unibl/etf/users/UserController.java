@@ -22,7 +22,7 @@ public class UserController {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return new ResponseEntity<>("An error occurred while fetching the PillarType. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
+            return new ResponseEntity<>("An error occurred while fetching the user. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
         }
     }
 
@@ -37,9 +37,73 @@ public class UserController {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            return new ResponseEntity<>("An error occurred while fetching users. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
+        }
+    }
+
+    @GetMapping("/map/{username}")
+    public ResponseEntity<?> getMap(@PathVariable("username") String username) {
+        try {
+            User user = userService.findByUsername(username);
+            if (user != null) {
+                return new ResponseEntity<>(user.getWorld(), HttpStatus.OK); // Vraća PillarType ako je pronađen
+            } else {
+                return new ResponseEntity<>("User not found.", HttpStatus.NOT_FOUND); // Vraća 404 ako nije pronađen
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("An error occurred while fetching map. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
+        }
+    }
+
+    @GetMapping("/character/{username}")
+    public ResponseEntity<?> getCharacter(@PathVariable("username") String username) {
+        try {
+            User user = userService.findByUsername(username);
+            if (user != null) {
+                return new ResponseEntity<>(user.getCharacter(), HttpStatus.OK); // Vraća PillarType ako je pronađen
+            } else {
+                return new ResponseEntity<>("User not found.", HttpStatus.NOT_FOUND); // Vraća 404 ako nije pronađen
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("An error occurred while fetching character. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
+        }
+    }
+
+    @PostMapping("/map/{username}")
+    public ResponseEntity<?> setMap(@PathVariable("username") String username, @RequestBody String map) {
+        try {
+            User user = userService.findByUsername(username);
+            if (user != null) {
+                user.setWorld(map);
+                return new ResponseEntity<>("World updated!", HttpStatus.OK); // Vraća PillarType ako je pronađen
+            } else {
+                return new ResponseEntity<>("User not found.", HttpStatus.NOT_FOUND); // Vraća 404 ako nije pronađen
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>("An error occurred while fetching the PillarType. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
         }
     }
+
+    @PostMapping("/character/{username}")
+    public ResponseEntity<?> setCharacter(@PathVariable("username") String username, @RequestBody String character) {
+        try {
+            User user = userService.findByUsername(username);
+            if (user != null) {
+                user.setCharacter(character);
+                return new ResponseEntity<>("Character updated!", HttpStatus.OK); // Vraća PillarType ako je pronađen
+            } else {
+                return new ResponseEntity<>("User not found.", HttpStatus.NOT_FOUND); // Vraća 404 ako nije pronađen
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("An error occurred while fetching the PillarType. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR); // Vraća 500 ako dođe do greške
+        }
+    }
+
+
 
 
 //    @Autowired

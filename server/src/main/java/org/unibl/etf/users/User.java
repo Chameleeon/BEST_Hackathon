@@ -26,6 +26,26 @@ public class User{
     @JsonProperty("points")
     private int points;
 
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public String getWorld() {
+        return world;
+    }
+
+    public void setWorld(String world) {
+        this.world = world;
+    }
+
+    public void setCharacter(String character) {
+        this.character = character;
+    }
+
     @Column(name = "SaltedHashLozinka")
     @JsonProperty("password")
     private String password;
