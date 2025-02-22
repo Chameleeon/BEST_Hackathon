@@ -81,6 +81,20 @@ public class UserPillar {
         this.condition = condition;
     }
 
+    public UserPillar(Timestamp lastActivity, Integer pillarTypeId, Integer userId, Double condition) {
+        this.lastActivity = lastActivity;
+        this.pillarTypeId = pillarTypeId;
+        this.userId = userId;
+        this.condition = condition;
+    }
+
+    public UserPillar(Integer pillarTypeId, Integer userId) {
+        this.lastActivity = null;
+        this.pillarTypeId = pillarTypeId;
+        this.userId = userId;
+        this.condition = 0.0;
+    }
+
     @Override
     public String toString() {
         return "Challenge{" +

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserPillarRepository extends CrudRepository<UserPillar, Long> {
 //    Activity findByTime(String name);
+    Iterable<UserPillar> findByUserId(int userId);
 }

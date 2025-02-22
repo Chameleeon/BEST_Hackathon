@@ -5,7 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService{
+public class UserService {
 
     @Autowired
     private org.unibl.etf.users.UserRepository userRepository;
@@ -17,8 +17,16 @@ public class UserService{
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
-        public User findByUsername(String username){
-            return userRepository.findByUsername(username);
-        }
 
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
+
+    public User findById(int id) {
+        return userRepository.findById(id);
+    }
+
+    public Iterable<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+}

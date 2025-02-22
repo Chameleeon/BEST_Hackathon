@@ -24,6 +24,9 @@ public class ActivityController {
         }
     }
 
+//    @PostMapping("/activity/submit")
+//    public ResponseEntity<String> submitActivity(@RequestBody Activity activity)  {}
+
 //    @GetMapping("/challenge/{name}")
 //    public ResponseEntity<?> getPillarByTypeName(@PathVariable("name") String name) {
 //        try {

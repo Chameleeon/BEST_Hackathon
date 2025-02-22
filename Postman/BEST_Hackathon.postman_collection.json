@@ -8,6 +8,25 @@
 	"item": [
 		{
 			"name": "REGISTER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'User registered successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"User registered successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -17,6 +36,56 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n  \"name\": \"Petar\",\n  \"surname\": \"Petrovic\",\n  \"username\": \"pero123\",\n  \"points\": 0,\n  \"password\": \"sifra123\",\n  \"world\": \"Srednji svijet\",\n  \"character\": \"Vitez\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'User registered successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"User registered successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Marko\",\n  \"surname\": \"Markovic\",\n  \"username\": \"markan\",\n  \"points\": 0,\n  \"password\": \"sifra123\",\n  \"world\": \"Srednji svijet\",\n  \"character\": \"Vitez\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -138,6 +207,337 @@
 			"response": []
 		},
 		{
+			"name": "GET MAP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Srednji svijet'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Srednji svijet\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/map/pero123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"map",
+						"pero123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CHARACTER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Vitez'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Vitez\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/character/pero123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"character",
+						"pero123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE MAP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'World updated!'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"World updated!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "NOVA MAPA",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/map/pero123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"map",
+						"pero123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CHARACTER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Character updated!'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Character updated!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "NEW CHARACTER",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/character/pero123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"character",
+						"pero123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER BY ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Name is a string with value 'Petar'\", function () {",
+							"  pm.expect(pm.response.json().name).to.be.a('string').and.to.equal(\"Petar\");",
+							"});",
+							"",
+							"pm.test(\"Surname is a string with value 'Petrovic'\", function () {",
+							"  pm.expect(pm.response.json().surname).to.be.a('string').and.to.equal('Petrovic');",
+							"});",
+							"",
+							"pm.test(\"Username is a string with value 'pero123'\", function () {",
+							"  pm.expect(pm.response.json().username).to.be.a('string').and.to.equal('pero123');",
+							"});",
+							"",
+							"pm.test(\"Points is a number with value '0'\", function () {",
+							"  pm.expect(pm.response.json().points).to.be.a('number').and.to.equal(0);",
+							"});",
+							"",
+							"pm.test(\"Password is a string\", function () {",
+							"  pm.expect(pm.response.json().password).to.be.a('string');",
+							"});",
+							"",
+							"pm.test(\"World is a string with value 'Srednji svijet'\", function () {",
+							"  pm.expect(pm.response.json().world).to.be.a('string').and.to.equal(\"Srednji svijet\");",
+							"});",
+							"",
+							"pm.test(\"Character is a string with value 'Vitez'\", function () {",
+							"  pm.expect(pm.response.json().character).to.be.a('string').and.to.equal(\"Vitez\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL USERS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Name is a string with value 'Petar'\", function () {",
+							"  pm.expect(pm.response.json()[0].name).to.be.a('string').and.to.equal(\"Petar\");",
+							"});",
+							"",
+							"pm.test(\"Surname is a string with value 'Petrovic'\", function () {",
+							"  pm.expect(pm.response.json()[0].surname).to.be.a('string').and.to.equal('Petrovic');",
+							"});",
+							"",
+							"pm.test(\"Username is a string with value 'pero123'\", function () {",
+							"  pm.expect(pm.response.json()[0].username).to.be.a('string').and.to.equal('pero123');",
+							"});",
+							"",
+							"pm.test(\"Points is a number with value '0'\", function () {",
+							"  pm.expect(pm.response.json()[0].points).to.be.a('number').and.to.equal(0);",
+							"});",
+							"",
+							"pm.test(\"Password is a string\", function () {",
+							"  pm.expect(pm.response.json()[0].password).to.be.a('string');",
+							"});",
+							"",
+							"pm.test(\"World is a string with value 'Srednji svijet'\", function () {",
+							"  pm.expect(pm.response.json()[0].world).to.be.a('string').and.to.equal(\"Srednji svijet\");",
+							"});",
+							"",
+							"pm.test(\"Character is a string with value 'Vitez'\", function () {",
+							"  pm.expect(pm.response.json()[0].character).to.be.a('string').and.to.equal(\"Vitez\");",
+							"});",
+							"",
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Name is a string with value 'Marko'\", function () {",
+							"  pm.expect(pm.response.json()[1].name).to.be.a('string').and.to.equal(\"Marko\");",
+							"});",
+							"",
+							"pm.test(\"Surname is a string with value 'Markovic'\", function () {",
+							"  pm.expect(pm.response.json()[1].surname).to.be.a('string').and.to.equal('Markovic');",
+							"});",
+							"",
+							"pm.test(\"Username is a string with value 'markan'\", function () {",
+							"  pm.expect(pm.response.json()[1].username).to.be.a('string').and.to.equal('markan');",
+							"});",
+							"",
+							"pm.test(\"Points is a number with value '0'\", function () {",
+							"  pm.expect(pm.response.json()[1].points).to.be.a('number').and.to.equal(0);",
+							"});",
+							"",
+							"pm.test(\"Password is a string\", function () {",
+							"  pm.expect(pm.response.json()[1].password).to.be.a('string');",
+							"});",
+							"",
+							"pm.test(\"World is a string with value 'Srednji svijet'\", function () {",
+							"  pm.expect(pm.response.json()[1].world).to.be.a('string').and.to.equal(\"Srednji svijet\");",
+							"});",
+							"",
+							"pm.test(\"Character is a string with value 'Vitez'\", function () {",
+							"  pm.expect(pm.response.json()[1].character).to.be.a('string').and.to.equal(\"Vitez\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "ADD GREEK GOD",
 			"event": [
 				{
@@ -164,6 +564,147 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n  \"name\": \"Hefest\",\n  \"caption\": \"Hefest is the Greek god of artisans, blacksmiths, carpenters, craftsmen, fire, metallurgy, metalworking, sculpture and volcanoes.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/greekGod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"greekGod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD GREEK GOD 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Greek god saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Greek god saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Hermes\",\n  \"caption\": \"Hermes is the ancient Greek god of trade, wealth, luck, fertility, animal husbandry, sleep, language, thieves, and travel.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/greekGod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"greekGod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD GREEK GOD 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Greek god saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Greek god saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Hades\",\n  \"caption\": \"Hades is the god of the underworld.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/greekGod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"greekGod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD GREEK GOD 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Greek god saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Greek god saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Demeter\",\n  \"caption\": \"Demeter is the Olympian goddess of the harvest and agriculture, presiding over crops, grains, food, and the fertility of the earth.\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -214,6 +755,156 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n  \"typeName\": \"Energija\",\n  \"greekGodId\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pillar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pillar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PILLAR 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'PillarType added successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PillarType added successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"typeName\": \"Transport\",\n  \"greekGodId\": \"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pillar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pillar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PILLAR 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'PillarType added successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PillarType added successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"typeName\": \"Otpad\",\n  \"greekGodId\": \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pillar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pillar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PILLAR 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'PillarType added successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PillarType added successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"typeName\": \"Prehrana\",\n  \"greekGodId\": \"4\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -491,6 +1182,100 @@
 			"response": []
 		},
 		{
+			"name": "ADD CHALLENGE WITH FOREIGN KEY 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Challenge saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Challenge saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Voznja autobusom na posao\",\n  \"caption\": \"U definisanom vremenskom intervalu, otidjite na posao/fakultet autobusom.\",\n  \"timeFrom\": \"2023-10-01T10:00:00\",\n  \"timeUntil\": \"2023-10-07T18:00:00\",\n  \"points\": 5,\n  \"pillarId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD CHALLENGE WITH FOREIGN KEY 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'Challenge saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Challenge saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Voznja trotinetom na posao\",\n  \"caption\": \"U definisanom vremenskom intervalu, otidjite na posao/fakultet trotinetom.\",\n  \"timeFrom\": \"2023-10-01T10:00:00\",\n  \"timeUntil\": \"2023-10-07T18:00:00\",\n  \"points\": 5,\n  \"pillarId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET CHALLENGE SUCCESS 2",
 			"event": [
 				{
@@ -536,9 +1321,21 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8080/challenge/Voznja biciklom na posao",
 					"protocol": "http",
@@ -580,7 +1377,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"userId\": 1,\n  \"pillarTypeId\": 1,\n  \"points\": 5,\n  \"condition\": 0.24,\n  \"lastActivity\": \"2025-12-02T10:00:00\"\n}",
+					"raw": "{\n  \"userId\": 1,\n  \"pillarTypeId\": 1,\n  \"condition\": 0.24,\n  \"lastActivity\": \"2025-12-02T10:00:00\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -596,6 +1393,185 @@
 					"port": "8080",
 					"path": [
 						"userPillar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD USER PILLAR 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'UserPillar saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"UserPillar saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"pillarTypeId\": 2,\n  \"condition\": 0.30,\n  \"lastActivity\": \"2025-12-02T10:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/userPillar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userPillar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD USER PILLAR 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response text is 'UserPillar saved successfully'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"UserPillar saved successfully\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 2,\n  \"pillarTypeId\": 1,\n  \"condition\": 0.10,\n  \"lastActivity\": \"2025-12-02T10:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/userPillar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userPillar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL TRANSPORT CHALLENGES",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify the response body content\", function () {",
+							"    pm.expect(pm.response.text()).to.include('[{\"id\":3,\"name\":\"Voznja autobusom na posao\",\"caption\":\"U definisanom vremenskom intervalu, otidjite na posao/fakultet autobusom.\",\"timeFrom\":\"2023-10-01T10:00:00.000+00:00\",\"timeUntil\":\"2023-10-07T18:00:00.000+00:00\",\"points\":5,\"pillarId\":2},{\"id\":4,\"name\":\"Voznja trotinetom na posao\",\"caption\":\"U definisanom vremenskom intervalu, otidjite na posao/fakultet trotinetom.\",\"timeFrom\":\"2023-10-01T10:00:00.000+00:00\",\"timeUntil\":\"2023-10-07T18:00:00.000+00:00\",\"points\":5,\"pillarId\":2}]');",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Transport",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER PILLARS BY USERNAME",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Response code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response body matches the expected value\", function () {",
+							"    pm.expect(pm.response.text()).to.eql('[{\"id\":1,\"lastActivity\":\"2025-12-02T10:00:00.000+00:00\",\"pillarTypeId\":1,\"userId\":1,\"condition\":0.24},{\"id\":2,\"lastActivity\":\"2025-12-02T10:00:00.000+00:00\",\"pillarTypeId\":2,\"userId\":1,\"condition\":0.3}]');",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/userPillar/pero123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userPillar",
+						"pero123"
 					]
 				}
 			},

@@ -16,5 +16,8 @@ public class PillarTypeService {
     public PillarType findByTypeName(String typeName) {
         return pillarsRepository.findByTypeName(typeName);
     }
+    public PillarType findById(int id) {
+        return pillarsRepository.findById(id);
+    }
 
 }

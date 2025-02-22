@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface GreekGodRepository extends CrudRepository<GreekGod, Long> {
     GreekGod findByName(String name);
+    GreekGod findById(int id);
 }

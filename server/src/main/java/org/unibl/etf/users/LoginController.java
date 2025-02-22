@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class LoginController {
     @Autowired
     private org.unibl.etf.users.UserService userService;
