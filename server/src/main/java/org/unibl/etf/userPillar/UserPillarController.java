@@ -1,22 +1,24 @@
-package org.unibl.etf.activity;
+package org.unibl.etf.userPillar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:3000")
-public class ActivityController {
+public class UserPillarController {
 
     @Autowired
-    private ActivityService activityService;
+    private UserPillarService userPillarService;
 
-    @PostMapping("/activity")
-    public ResponseEntity<String> saveActivity(@RequestBody Activity activity)  {
+    @PostMapping("/userPillar")
+    public ResponseEntity<String> saveUserPillar(@RequestBody UserPillar userPillar)  {
         try {
-            activityService.saveActivity(activity);
-            return new ResponseEntity<>("Activity saved successfully", HttpStatus.OK);
+            userPillarService.saveUserPillar(userPillar);
+            return new ResponseEntity<>("UserPillar saved successfully", HttpStatus.OK);
         }
         catch(Exception e){
             e.printStackTrace();

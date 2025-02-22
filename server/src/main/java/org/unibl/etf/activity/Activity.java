@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "izazov")
+@Table(name = "aktivnost")
 public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generisanje ID-a

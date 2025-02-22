@@ -8,24 +8,38 @@ create table korisnik
     Ime varchar(20) not null,
     Prezime varchar(20) not null,
     KorisnickoIme varchar(30) not null,
-    Lozinka varchar(600) not null,
+    SaltedHashLozinka varchar(600) not null,
     UkupnoBodova int not null default 0,
     Svijet text not null,
     Karakter text not null
+);
+
+create table grcki_bog
+(
+	IdGrckogBoga int auto_increment primary key,
+    Ime varchar(30) not null,
+    Opis text
 );
 
 create table vrsta_stuba
 (
 	IdVrste int auto_increment primary key,
     NazivVrste varchar(30) not null,
-    GrckiBog varchar(20)
+    IdGrckogBoga int not null,
+    constraint FK_vrsta_stuba_grcki_bog
+    foreign key (IdGrckogBoga)
+    references grcki_bog(IdGrckogBoga)
+    on update cascade on delete cascade
 );
 
-create table angazovanje
+create table korisnikov_stub
 (
+	IdKorisnikovogStuba int auto_increment primary key,
 	IdKorisnika int,
 	IdVrste int,
-    primary key (IdKorisnika, IdVrste),
+    BrojBodova int not null default 0,
+    StanjeStuba double not null default 0,
+    PoslednjaAktivnost timestamp,
     constraint FK_angazovanje_korisnik
     foreign key (IdKorisnika)
     references korisnik(IdKorisnika)

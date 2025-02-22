@@ -26,7 +26,7 @@ public class User{
     @JsonProperty("points")
     private int points;
 
-    @Column(name = "Lozinka")
+    @Column(name = "SaltedHashLozinka")
     @JsonProperty("password")
     private String password;
 

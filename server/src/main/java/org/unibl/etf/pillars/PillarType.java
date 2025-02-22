@@ -14,16 +14,16 @@ public class PillarType{
     @JsonProperty("typeName")
     private String typeName;
 
-    @Column(name = "GrckiBog")
-    @JsonProperty("greekGod")
-    private String greekGod;
+    @Column(name = "IdGrckogBoga")
+    @JsonProperty("greekGodId")
+    private int greekGodId;
 
     public PillarType(){
     }
 
-    public PillarType(String typeName, String greekGod){
+    public PillarType(String typeName, int greekGodId){
         this.typeName = typeName;
-        this.greekGod = greekGod;
+        this.greekGodId = greekGodId;
     }
 
     public int getId() {
@@ -38,6 +38,14 @@ public class PillarType{
         this.id = id;
     }
 
+    public int getGreekGodId() {
+        return greekGodId;
+    }
+
+    public void setGreekGodId(int greekGodId) {
+        this.greekGodId = greekGodId;
+    }
+
     public void setTypeName(String typeName) {
         this.typeName = typeName;
     }
@@ -47,7 +55,7 @@ public class PillarType{
         return "PillarType{" +
                 "id='" + id + '\'' +
                 ", typeName='" + typeName + '\'' +
-                ", greekGod='" + greekGod + '\'' +
+                ", greekGod='" + greekGodId + '\'' +
                 '}';
     }
 }
