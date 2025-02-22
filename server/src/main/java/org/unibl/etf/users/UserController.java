@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.unibl.etf.pillars.PillarType;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 public class UserController {
     @Autowired
     private UserService userService;
