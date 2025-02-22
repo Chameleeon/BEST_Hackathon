@@ -17,13 +17,9 @@ public class UserPillar {
     @JsonProperty("lastActivity")
     private Timestamp lastActivity;
 
-    @Column(name = "BrojBodova")
-    @JsonProperty("points")
-    private int points;
-
     @Column(name = "IdVrste")
-    @JsonProperty("pillarId")
-    private Integer pillarId;
+    @JsonProperty("pillarTypeId")
+    private Integer pillarTypeId;
 
     @Column(name = "IdKorisnika")
     @JsonProperty("userId")
@@ -31,7 +27,7 @@ public class UserPillar {
 
     @Column(name = "StanjeStuba")
     @JsonProperty("condition")
-    private Integer condition;
+    private Double condition;
 
     public int getId() {
         return id;
@@ -52,20 +48,13 @@ public class UserPillar {
         this.lastActivity = lastActivity;
     }
 
-    public int getPoints() {
-        return points;
+
+    public Integer getPillarTypeId() {
+        return pillarTypeId;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-    public Integer getPillarId() {
-        return pillarId;
-    }
-
-    public void setPillarId(Integer pillarId) {
-        this.pillarId = pillarId;
+    public void setPillarTypeId(Integer pillarTypeId) {
+        this.pillarTypeId = pillarTypeId;
     }
 
     public Integer getUserId() {
@@ -76,19 +65,18 @@ public class UserPillar {
         this.userId = userId;
     }
 
-    public Integer getCondition() {
+    public Double getCondition() {
         return condition;
     }
 
-    public void setCondition(Integer condition) {
+    public void setCondition(Double condition) {
         this.condition = condition;
     }
 
-    public UserPillar(int id, Timestamp lastActivity, int points, Integer pillarId, Integer userId, Integer condition) {
+    public UserPillar(int id, Timestamp lastActivity, Integer pillarTypeId, Integer userId, Double condition) {
         this.id = id;
         this.lastActivity = lastActivity;
-        this.points = points;
-        this.pillarId = pillarId;
+        this.pillarTypeId = pillarTypeId;
         this.userId = userId;
         this.condition = condition;
     }
@@ -98,8 +86,7 @@ public class UserPillar {
         return "Challenge{" +
                 "id='" + id + '\'' +
                 ", userId='" + userId + '\'' +
-                ", pillarId='" + pillarId + '\'' +
-                ", points='" + points + '\'' +
+                ", pillarId='" + pillarTypeId + '\'' +
                 ", condition='" + condition + '\'' +
                 ", lastActivity='" + lastActivity + '\'' +
                 '}';
