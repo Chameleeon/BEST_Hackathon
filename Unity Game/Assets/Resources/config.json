@@ -1,0 +1,4 @@
+{
+    "pillarApiUrl": "http://172.20.10.3:8080/userPillar/pero123",
+    "worldApi": "http://172.20.10.3:8080/map/"
+}
