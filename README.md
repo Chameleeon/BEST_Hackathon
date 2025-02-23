@@ -40,12 +40,18 @@ Kako bi se aplikacija ispravno pokrenula, potrebno je pokrenuti sve komponente r
 ## Server baze podataka
 
 ## Domenski server
-Za pokretanje domenskog servera potrebno je pozicionirati se u root folder.
+Za pokretanje domenskog servera potrebno je pozicionirati se u [root folder](https://github.com/Chameleeon/BEST_Hackathon/tree/main/server) servera i pokrenuti sljedeću komandu:
 ```bash
 mvn spring-boot:run
 ```
-## Klijentska aplikacija
 
+## Server igrice
+Za pokretanje servera koji pokreće igricu, potrebno je pozicionirati se u [WebGL Builds](https://github.com/Chameleeon/BEST_Hackathon/tree/main/Unity%20Game/WebGL%20Builds) folder unitar Unity Game foldera i zatim pokrenuti komandu:
+```bash
+python server.py
+```
+
+## Klijentska aplikacija
 
 
 
