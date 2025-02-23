@@ -53,7 +53,7 @@ python server.py
 ```
 
 ## Klijentska aplikacija
-Na kraju potrebno je pokrenuti klijentsku aplikaciju. Potrebno je skinuti [Expo](https://expo.dev/go) na telefon a zatim pokrenuti web server. To je moguće uraditi pozicioniranjem u [root folder](https://github.com/Chameleeon/BEST_Hackathon/tree/main/FrontEnd) klijentske aplikacije i pokretanjem sljedećih komandi:
+Na kraju potrebno je pokrenuti klijentsku aplikaciju. Potrebno je skinuti [Expo](https://expo.dev/go) na telefon a zatim pokrenuti web server. To je moguće uraditi pozicioniranjem u [root folder](https://github.com/Chameleeon/BEST_Hackathon/tree/main/FrontEnd) klijentske aplikacije i pokretanjem sljedeće komande:
 ```bash
 npm install npx expo start
 ```
