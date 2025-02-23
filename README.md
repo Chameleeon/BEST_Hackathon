@@ -44,6 +44,7 @@ Igrica koja predstavlja svijet korisnika je napravljena upotrebom Unity alata za
 Kako bi se aplikacija ispravno pokrenula, potrebno je pokrenuti sve komponente redoslijedom kojim su navedene u ovom poglavlju.
 
 ## Server baze podataka
+Potrebno je imati pokrenut MySQL server i zatim izvršiti DDL skripte koje se nalaze u repozitorijumu u [BP](https://github.com/Chameleeon/BEST_Hackathon/tree/main/bp) folderu.
 
 ## Domenski server
 Za pokretanje domenskog servera potrebno je pozicionirati se u [root folder](https://github.com/Chameleeon/BEST_Hackathon/tree/main/server) servera i pokrenuti sljedeću komandu:
