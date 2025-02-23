@@ -64,7 +64,8 @@ Na kraju potrebno je pokrenuti klijentsku aplikaciju. Potrebno je skinuti [Expo]
 npm install npx expo start
 ```
 
-
+# Jedinični testovi
+U folderu Postman nalaze se testovi za Rest API.
 
 
 
