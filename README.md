@@ -1,9 +1,9 @@
-# Hey, World
+# EcoQuest
 
 ###
 
-## Šta je Hey, World?
-Hey, World je aplikacija napravljena sa ciljem podizanja ekološke svijesti stanovnika kroz gemifikaciju i nagrade. Nudi korisnicima njihov vlastiti svijet na kojem direktno mogu da primjete uticaj svojih djela na okolinu. Hey, World je zasnovana na ideji četiri grčka boga od kojih svaki reprezentuje jednu od oblasti kroz koje svakodnevni čovjek može da utiče na svijet.
+## Šta je EcoQuest?
+EcoQuest je aplikacija napravljena sa ciljem podizanja ekološke svijesti stanovnika kroz gemifikaciju i nagrade. Nudi korisnicima njihov vlastiti svijet na kojem direktno mogu da primjete uticaj svojih djela na okolinu. EcoQuest je zasnovana na ideji četiri grčka boga od kojih svaki reprezentuje jednu od oblasti kroz koje svakodnevni čovjek može da utiče na svijet.
 
 ## Kako?
 ### Osnovna ideja
