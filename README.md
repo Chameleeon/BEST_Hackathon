@@ -19,7 +19,7 @@ Osim što korisnik može da kreira i održava svoj vlastiti svijet i vidi poslje
 
 Kroz različite izazove u različitim kategorijama korisnici mogu da skupljaju poene unutar aplikacije. Izvršavanjem izazova korisnici skupljaju bodove i održavaju stubove. Bodove je moguće zamijeniti unutar igrice za kozmetičke nadogradnje karaktera i svijeta. Moguće je graditi svijet kupovinom ekološki odgovornih objekata i stavljanjem njih u svijet. Takođe, određeni broj bodova mjesečno moguće je zamijeniti za nagrade u stvarnom životu.
 
-### Struktura aplikacije
+# Struktura aplikacije
 Aplikacija se sastoji iz četiri dijela - klijentske aplikacije, domenskog servera, servera baze podataka i servera na kojem se pokreće igrica.
 
 ## Klijentska aplikacija
@@ -34,7 +34,8 @@ Server baze podataka je realizovan u MySQL-u i čuva sve relevantne podatke. Kom
 ## Server igrice
 Igrica koja predstavlja svijet korisnika je napravljena upotrebom Unity alata za razvoj igrica upotrebom WebGL-a. Igrica se pokreće na http serveru odakle je klijentska aplikacija dobavlja i prikazuje korisniku.
 
-### Pokretanje
+
+# Pokretanje
 Kako bi se aplikacija ispravno pokrenula, potrebno je pokrenuti sve komponente redoslijedom kojim su navedene u ovom poglavlju.
 
 ## Server baze podataka
